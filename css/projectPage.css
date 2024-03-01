@@ -1,0 +1,30 @@
+.add-project-page,
+.add-member-page,
+.add-task-page {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  color: var(--secondary-text-color);
+  align-items: center;
+}
+
+.input-task-description,
+.input-task-name,
+.input-project-name,
+.input-due-date,
+.select-workflow,
+.select-member,
+.project-list {
+  width: 200px;
+  padding: 10px;
+  font-size: 20px;
+  border-radius: 5px;
+}
+
+.workflow-name {
+  text-decoration: underline;
+}
+
+.hidden {
+  display: none;
+}

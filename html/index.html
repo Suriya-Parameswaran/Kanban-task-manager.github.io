@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task Manager</title>
+    <link href="../css/reset.css" rel="stylesheet" />
+    <link href="../css/index.css" rel="stylesheet" />
+    <link href="../css/loginAndRegister.css" rel="stylesheet" />
+    <link href="../css/projectPage.css" rel="stylesheet" />
+    <link rel="icon" type="image/png" href="../assets/webPageIcon.png" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script src="../js/index.js" type="module" defer></script>
+  </head>
+  <body>
+    <!-- Navigation bar -->
+    <nav class="navigation-bar hidden">
+      <button class="btn-logout">Log-out</button>
+      <i class="fa fa-user btn-account"></i>
+    </nav>
+    <main class="main-container">
+      <!-- log-in page -->
+      <section class="login-page hidden">
+        <h3 class="heading">Login</h3>
+        <input
+          class="input-existing-user-name"
+          type="text"
+          placeholder="Name"
+        />
+        <input
+          class="input-existing-user-password"
+          type="password"
+          maxlength="4"
+          placeholder="Password"
+        />
+        <button class="btn-sign-in">Sign - in</button>
+      </section>
+      <!-- register page -->
+      <section class="register-page hidden">
+        <h3 class="heading">Register</h3>
+        <input type="text" placeholder="Name" class="input-new-user-name" />
+        <input
+          class="input-new-user-password"
+          type="password"
+          maxlength="4"
+          placeholder="Password"
+        />
+        <button class="btn-create">Create account</button>
+      </section>
+      <section class="admin">
+        <!-- admin home page -->
+        <section class="admin-home-page hidden">
+          <div class="side-bar">
+            <select class="project-list">
+              <option value="" disable selected hidden>Project list</option>
+            </select>
+            <button class="btn-add-project">Add project +</button>
+            <div class="add-project-page hidden">
+              <input
+                type="text"
+                placeholder="Project Name"
+                class="input-project-name"
+              />
+              <button class="btn-create-project">Create</button>
+            </div>
+            <div class="add-member-page hidden">
+              <h3>Select team member</h3>
+              <div>
+                <input
+                  type="checkbox"
+                  value="A"
+                  name="member1"
+                  class="checkbox"
+                />
+                <label for="member1"> A</label><br />
+              </div>
+              <div>
+                <input
+                  type="checkbox"
+                  value="B"
+                  name="member2"
+                  class="checkbox"
+                />
+                <label for="member2"> B</label><br />
+              </div>
+              <div>
+                <input
+                  type="checkbox"
+                  value="C"
+                  name="member3"
+                  class="checkbox"
+                />
+                <label for="member3"> C</label><br />
+              </div>
+              <div>
+                <input
+                  type="checkbox"
+                  value="D"
+                  name="member3"
+                  class="checkbox"
+                />
+                <label for="member4"> D</label><br />
+              </div>
+              <button class="btn-add-team-member">Add</button>
+            </div>
+            <div class="add-task-page hidden">
+              <input
+                type="text"
+                class="input-task-name"
+                placeholder="Task Name"
+              />
+              <select class="select-member">
+                <option value="" disable selected hidden>Select Member</option>
+              </select>
+              <input
+                type="text"
+                class="input-task-description"
+                placeholder="Task Description"
+              />
+              <input type="date" class="input-due-date" />
+              <select class="select-workflow">
+                <option value="" disable selected hidden>
+                  Select workflow
+                </option>
+                <option value="inprogress">In-progress</option>
+                <option value="inreview">In-review</option>
+                <option value="completed">Completed</option>
+              </select>
+              <button class="btn-create-task">Create</button>
+            </div>
+          </div>
+          <div class="project-board hidden">
+            <div class="add-member-task">
+              <button class="btn-add-member">Add member +</button>
+              <button class="btn-add-task">Add task +</button>
+            </div>
+          </div>
+        </section>
+        <!-- admin account page -->
+        <section class="account-dashboard"></section>
+      </section>
+      <section class="member">
+        <!-- member's home page -->
+        <section class="member-home-page hidden">
+          <div class="side-bar">
+            <button class="btn-add-project">Add project +</button>
+            <div class="add-project-page hidden">
+              <input
+                type="text"
+                placeholder="Project Name"
+                class="input-project-name"
+              />
+              <button class="btn-create-project">Create</button>
+            </div>
+            <div class="add-task-page hidden">
+              <input
+                type="text"
+                class="input-task-name"
+                placeholder="Task Name"
+              />
+              <input
+                type="text"
+                class="input-task-description"
+                placeholder="Task Description"
+              />
+              <input type="date" class="input-due-date" />
+              <select class="select-workflow">
+                <option value="" disable selected hidden>
+                  Select workflow
+                </option>
+                <option value="In-progress">In-progress</option>
+                <option value="Pending">Pending</option>
+                <option value="Completed">Completed</option>
+              </select>
+              <button class="btn-create-task">Create</button>
+            </div>
+          </div>
+          <div class="project-board">
+            <div class="add-member-task">
+              <button class="btn-add-task">Add task +</button>
+            </div>
+            <hr />
+            <p class="project-name">Project 1</p>
+            <div class="workflow">
+              <div class="workflow1">
+                <h3>In-progress</h3>
+                <div class="task-list"></div>
+              </div>
+              <div class="workflow2">
+                <h3>Pending</h3>
+                <div class="task-list"></div>
+              </div>
+              <div class="workflow3">
+                <h3>Completed</h3>
+                <div class="task-list"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- member's account page -->
+        <section class="member-account-dashboad"></section>
+      </section>
+    </main>
+    <section class="display-task-details" id="display-task">
+      <div class="task-details">
+        <p class="task-name-details">ji</p>
+        <p class="task-member-details">a</p>
+        <p class="task-description-details">aa</p>
+        <p class="task-duedate-details">sw</p>
+        <p class="task-workflow-details">ss</p>
+        <button class="btn-modify-task-details">Modify</button>
+      </div>
+    </section>
+  </body>
+</html>

@@ -1,0 +1,46 @@
+.heading {
+  color: var(--secondary-text-color);
+  font-size: 30px;
+  text-align: center;
+}
+
+.login-page,
+.register-page {
+  border: 2px solid var(--primary-background-color);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 80px;
+  position: relative;
+  top: 100px;
+}
+
+.input-existing-user-name,
+.input-existing-user-password,
+.input-new-user-name,
+.input-new-user-password {
+  border-radius: 5px;
+  color: var(--primary-text-color);
+  font-size: 20px;
+  font-weight: 700;
+  padding: 15px;
+  width: 300px;
+}
+
+.btn-sign-in,
+.btn-create-new-account,
+.btn-create {
+  background-color: rgb(206, 74, 118);
+  border-radius: 15px;
+  color: var(--primary-text-color);
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: 700;
+  padding: 15px;
+  width: 300px;
+  color: var(--secondary-text-color);
+}
+
+.hidden {
+  display: none;
+}
